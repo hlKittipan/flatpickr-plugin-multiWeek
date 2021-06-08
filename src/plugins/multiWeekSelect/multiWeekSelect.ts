@@ -10,10 +10,12 @@ export type MultiWeeks = {
 
 export interface MultiWeekConfig {
   week: Number;
+  currentWeek: number;
 }
 
 const defaultWeekConfig: MultiWeekConfig = {
   week: 1,
+  currentWeek: 1,
 };
 
 const DAY_IN_WEEK: number = 7;
@@ -118,6 +120,11 @@ function multiWeekSelectPlugin(
         const optionValue = `${index * DAY_IN_WEEK}`;
         optionElement.value = optionValue;
         optionElement.text = optionValue;
+        if (index == weekConfig.currentWeek) {
+          optionElement.selected = true;
+          let selectedWeek: number = weekConfig.currentWeek;
+          fp.weekOption = selectedWeek * 7;
+        }
         weekOptionDropdownContainer.appendChild(optionElement);
       }
       weekOptionDropdownContainer.addEventListener(
