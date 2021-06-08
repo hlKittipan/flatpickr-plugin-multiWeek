@@ -1,0 +1,20 @@
+.flatpickr-multiWeek-notice {
+  color: red;
+  font-weight: 500;
+}
+
+.flatpickr-multiWeek-weekSelect {
+  display: inline-block;
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: 300;
+  height: auto;
+  line-height: inherit;
+  margin: -1px 0 0 0;
+  outline: none;
+  padding: 0 0 0 0.5ch;
+}
